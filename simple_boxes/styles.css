@@ -1,0 +1,29 @@
+.first_div,
+.second_div,
+.third_div,
+.fourth_div {
+  margin: 1em auto;
+  padding: 70px;
+  width: 50%;
+}
+
+div h2 {
+  font-style: italic;
+  text-align: center;
+}
+
+.first_div {
+  background-color: maroon;
+}
+
+.second_div {
+  background-color: red;
+}
+
+.third_div {
+  background-color: purple;
+}
+
+.fourth_div {
+  background-color: fuchsia;
+}
