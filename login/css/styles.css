@@ -1,0 +1,52 @@
+/* Base styles */
+body {
+  font-family: 'Nunito', sans-serif;
+}
+form {
+  width: 30%;
+}
+h2 {
+  margin: 0;
+  font-size: 3em;
+  text-align: center;
+}
+p {
+  font-size: 1.5em;
+  margin: 0;
+}
+input[type="text"],
+input[type="password"] {
+  display: block;
+  margin: 10px;
+}
+input[type="submit"] {
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
+}
+.name-section {
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  background-color: red;
+  color: white;
+}
+.btn-group {
+  border-radius: 0 0 10px 10px;
+  background-color: red;
+  color: white;
+}
+
+/* Layout styles */
+.container {
+  display: flex;
+  justify-content: center;
+}
+.btn-group {
+  display: flex;
+  justify-content: center;
+}
+.form-fields {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
