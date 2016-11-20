@@ -3,7 +3,7 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 form {
-  width: 30%;
+  width: 287px;
 }
 h2 {
   margin: 0;
@@ -16,12 +16,10 @@ p {
 }
 input[type="text"],
 input[type="password"] {
-  display: block;
   margin: 10px;
 }
 input[type="submit"] {
-  display: inline-block;
-  padding: 5px;
+  flex: 1 20px;
   margin: 10px;
 }
 .name-section {
