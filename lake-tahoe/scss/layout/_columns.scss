@@ -8,3 +8,11 @@
   @extend %columns;
   float: right;
 }
+
+.tips,
+.resorts {
+  @media #{$brk-narrow} {
+    float: none !important;
+    width: 100% !important;
+  }
+}
