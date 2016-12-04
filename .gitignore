@@ -1,2 +1,8 @@
 # Mac files
 .DS_Store
+
+#Generated CSS
+/sass-basics/*/css/*
+/sass-basics/*/*.css
+/sass-basics/*/*.css.map
+/sass-basics/*/.sass-cache
