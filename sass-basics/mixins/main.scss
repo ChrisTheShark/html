@@ -1,0 +1,37 @@
+@mixin roundy($radius) {
+  border-radius: $radius;
+  border-top-right-radius: $radius * 2;
+  border-bottom-left-radius: $radius * 2;
+}
+
+@mixin green_links {
+  a {
+    color: green;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+.box {
+  @include roundy(4px);
+  @include green_links;
+}
+
+// A whole bunch of other code
+.button {
+  @include roundy(2px);
+}
+
+%bar {
+  height: 14px;
+  font-size: 10px;
+  > div {
+    float: left;
+    clear: none;
+  }
+}
+
+.menu {
+  @extend %bar;
+}

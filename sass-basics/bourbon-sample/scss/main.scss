@@ -1,0 +1,73 @@
+@import 'normalize/normalize';
+@import 'bourbon/bourbon';
+
+$color-outter:     #FFE5D4;
+$color-background: #FFA266;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  @include display(flex);
+  @include flex-direction(column);
+  font-family: $helvetica;
+  background-color: $color-background;
+  min-height: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background-color: $color-outter;
+}
+
+.container {
+  flex: 1;
+}
+
+.main-header {
+  background-color: $color-outter;
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+}
+
+.main-logo {
+  text-align: center;
+}
+
+.main-nav li {
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.copyright {
+  padding: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    @include flex-direction(row);
+    @include align-items(center);
+  }
+  .main-logo {
+    padding-left: 10px;
+  }
+  .main-nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
