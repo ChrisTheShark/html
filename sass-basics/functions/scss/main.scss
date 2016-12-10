@@ -4,6 +4,21 @@ $color: #369;
   @return unquote($value + "px");
 }
 
+@mixin color_class($color) {
+    .#{$color} {
+      background: $color;
+      float: left;
+
+      @if $color == red {
+        width: pxify(red($color));
+      } @else if $color == blue {
+        width: pxify(blue($color));
+      } @else if $color == green {
+        width: pxify(green($color));
+      }
+    }
+}
+
 div {
   height: 100px;
   width: 255px;
@@ -14,21 +29,22 @@ div {
   background: $color;
 }
 
-.red,
-.blue,
-.green {
-  float: left;
-}
+@include color_class(red);
+@include color_class(green);
+@include color_class(blue);
 
-.red {
-  background: red;
-  width: pxify(red($color));
-}
-.blue {
-  background: blue;
-  width: pxify(blue($color));
-}
-.green {
-  background: green;
-  width: pxify(green($color));
+$time: morning;
+
+@if $time == morning {
+  a {
+    color: red;
+  }
+} @else if $time == afternoon {
+  a {
+    color: blue;
+  }
+} @else {
+  a {
+    color: gray;
+  }
 }

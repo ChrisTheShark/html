@@ -4,6 +4,8 @@
 $color-outter:     #FFE5D4;
 $color-background: #FFA266;
 
+$break-medium:     'min-width: 768px';
+
 * {
   box-sizing: border-box;
 }
@@ -40,10 +42,19 @@ footer {
   @include display(flex);
   @include flex-direction(column);
   @include justify-content(space-between);
+
+  @media (#{$break-medium}) {
+    @include flex-direction(row);
+    @include align-items(center);
+  }
 }
 
 .main-logo {
   text-align: center;
+
+  @media (#{$break-medium}) {
+    padding-left: 10px;
+  }
 }
 
 .main-nav li {
@@ -51,23 +62,14 @@ footer {
   padding: 10px;
   text-align: center;
   cursor: pointer;
+
+  @media (#{$break-medium}) {
+    display: inline-block;
+    margin-right: 10px;
+  }
 }
 
 .copyright {
   padding: 10px;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .main-header {
-    @include flex-direction(row);
-    @include align-items(center);
-  }
-  .main-logo {
-    padding-left: 10px;
-  }
-  .main-nav li {
-    display: inline-block;
-    margin-right: 10px;
-  }
 }

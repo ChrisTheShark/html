@@ -1,0 +1,61 @@
+$max_container_width: 1100px;
+$container_width:     100%;
+$column_width:        73px;
+$gutter_width:        20px;
+
+/* Columns are 65px wide, with 20px gutters
+=========================================== */
+@function getColumnPixels($column_num, $num_gutters) {
+  @return ($column_num * $column_width) + ($gutter_width * $num_gutters);
+}
+
+@function percentColumnWidth($column_num, $num_gutters) {
+  @return percentage(getColumnPixels($column_num, $num_gutters) / $max_container_width);
+}
+
+.container {
+  width: $container_width;
+}
+
+[class^="col-"] {
+  width: $container_width;
+}
+
+@media (min-width: 768px) {
+  .col-1 {
+    width: percentColumnWidth(1, 0);
+  }
+  .col-2 {
+    width: percentColumnWidth(2, 1);
+  }
+  .col-3 {
+    width: percentColumnWidth(3, 2);
+  }
+  .col-4 {
+    width: percentColumnWidth(4, 3);
+  }
+  .col-5 {
+    width: percentColumnWidth(5, 4);
+  }
+  .col-6 {
+    width: percentColumnWidth(6, 5);
+  }
+  .col-7 {
+    width: percentColumnWidth(7, 6);
+  }
+  .col-8 {
+    width: percentColumnWidth(8, 7);
+  }
+  .col-9 {
+    width: percentColumnWidth(9, 8);
+  }
+  .col-10 {
+    width: percentColumnWidth(10, 9);
+  }
+  .col-11 {
+    width: percentColumnWidth(11, 10);
+  }
+  .col-12 {
+    width: percentColumnWidth(12, 11);
+  }
+}

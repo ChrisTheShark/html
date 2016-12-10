@@ -1,0 +1,49 @@
+.tab-group {
+  margin: 0 auto;
+  max-width: $accordian_max_width;
+}
+
+.tab {
+  position: relative;
+  width: 100%;
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -999;
+
+    &:focus + label {
+      @extend %hover-spacing;
+    }
+
+    &:checked ~ .tab-content {
+      max-height: 6.25em;
+    }
+  }
+
+  label {
+    background: $color_label_background;
+    color: $color_label_text;
+    display: block;
+    font-weight: bold;
+    line-height: 3;
+    padding-left: .5em;
+    margin-bottom: .5em;
+    transition: letter-spacing .55s;
+
+    &:hover {
+      @extend %hover-spacing;
+    }
+  }
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .35s;
+
+  p {
+    margin: 1em 0;
+  }
+}

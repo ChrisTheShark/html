@@ -1,0 +1,46 @@
+/* Columns are 65px wide, with 20px gutters
+=========================================== */
+.container {
+  width: 100%; }
+
+[class^="col-"] {
+  width: 100%; }
+
+@media (min-width: 768px) {
+  .col-1 {
+    width: 6.63636%; }
+
+  .col-2 {
+    width: 15.09091%; }
+
+  .col-3 {
+    width: 23.54545%; }
+
+  .col-4 {
+    width: 32%; }
+
+  .col-5 {
+    width: 40.45455%; }
+
+  .col-6 {
+    width: 48.90909%; }
+
+  .col-7 {
+    width: 57.36364%; }
+
+  .col-8 {
+    width: 65.81818%; }
+
+  .col-9 {
+    width: 74.27273%; }
+
+  .col-10 {
+    width: 82.72727%; }
+
+  .col-11 {
+    width: 91.18182%; }
+
+  .col-12 {
+    width: 99.63636%; } }
+
+/*# sourceMappingURL=main.css.map */
